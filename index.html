@@ -47,9 +47,45 @@ button.youtube {
    top: 0px;
    right:0px;
    z-index: 1;
-   opacity:0.9;
    border-style: solid;
    border-color: black black black #00CCFF;
+}
+.menu_bar {
+   width: 10%;
+   height: 100%;
+   background: black;
+   position:fixed;
+   top: 0px;
+   left:0px;
+   z-index: 1;
+   color: #00CCFF;
+   text-align: center;
+   border-style: solid;
+   border-color: black #00CCFF black black ;
+}
+.menu {
+   position: relative;
+   top: 20px;
+   left:0px;
+   z-index: 2;
+   font-size: 40px;
+   text-align: center;
+   border: none;
+   background: transparent;
+   color: #00CCFF;
+   text-decoration: underline;
+}
+.arasi {
+   position: relative;
+   top: 50px;
+   left:0px;
+   z-index: 2;
+   font-size: 20px;
+   text-align: center;
+   border: none;
+   background: transparent;
+   color: #00CCFF;
+   text-decoration: underline;
 }
 .icon {
   padding: 0;
@@ -94,6 +130,38 @@ button.youtube {
    border-style: solid;
    border-color: black black #00CCFF;
 }
+.page1 {
+    display:block;
+    width: 1500px;
+    height: 1000px;
+    position: absolute;
+    top: 210px;
+    left:200px;
+    z-index: 0;
+    text-align: center;
+    color: #00CCFF;
+    font-size: 20px;
+}
+.page2 {
+    display:none;
+    width: 1500px;
+    height: 1000px;
+    position: absolute;
+    top: 210px;
+    left:200px;
+    text-align: center;
+    color: #00CCFF;
+    font-size: 40px;
+}
+.arasi_list {
+    position: absolute;
+    top: 100px;
+    left:500px;
+    text-align: left;
+    color: #00CCFF;
+    font-size: 20px;
+    border-color: #00CCFF;
+}
 body {
   background: black;
 }
@@ -101,6 +169,26 @@ button img {
   display: block;
 }
 </style>
+
+<script type="text/javascript" language="javascript">
+function SelectPage( page ) {
+    var elementPage1 = document.getElementById( "page1" );
+    var elementPage2 = document.getElementById( "page2" );
+
+    switch( page ) {
+    case 1:
+        elementPage1.style.display = 'block';
+        elementPage2.style.display = 'none';
+        break;
+
+    case 2:
+        elementPage1.style.display = 'none';
+        elementPage2.style.display = 'block';
+        break;
+    }
+};
+</script>
+
 <div class="title">
 <br>灰猫のほーむぺーじだよー
 </div>
@@ -112,6 +200,51 @@ button img {
 <div class="description">
   灰猫
 </div>
+
+<div class="menu_bar">
+  <button class="menu" type="submit" onclick="SelectPage(1);">
+    menu
+  </button>
+  <button class="arasi" type="submit" onclick="SelectPage(2);">
+    荒らしリスト
+  </button>
+</div>
+
+<div class="honbun">
+  <div id='page1' class="page1">
+    _(-ω-`_)⌒)_
+  </div>
+  <div id='page2' class="page2">
+    荒らしリスト
+    <table class="arasi_list" border=1>
+    <tr>
+      <th>ゲーマータグ</th>
+      <th>種類</th>
+      <th>詳細</th>
+    </tr>
+    <tr>
+      <td>draemon0511</td>
+      <td>ハック<br>フリーズ</td>
+      <td>エンドラ大量召喚<br>フリーズ使用</td>
+    </tr>
+    <tr>
+      <td>Apple0082</td>
+      <td>ハック</td>
+      <td>ophack<br>kick</td>
+    </tr>
+    <tr>
+      <td>ajin258</td>
+      <td>ハック</td>
+      <td>コマンドトロッコ使用</td>
+    </tr>
+    <tr>
+      <td>MISOSOUPHAKAMI</td>
+      <td>フリーズ</td>
+      <td>フリーズ使用</td>
+    </tr>
+  </table>
+  </div>
+</div>
 <div class="side"></div>
 <img src= "haineko.png" class="icon" alt= "灰猫" title = "灰猫" width="100%" height="100%">
 <button class="twitter" type="submit" onclick="location.href='https://twitter.com/haineko0407'">
@@ -120,8 +253,6 @@ button img {
 <button class="youtube" type="submit" onclick="location.href='https://www.youtube.com/channel/UCYU8c5V2D2GK1POnLxJVipw/featured?view_as=subscriber'">
   <img src= "youtube.png" alt= "灰猫youtube" title = "灰猫youtube" width="100%" height="100%">
 </button>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-   </strong>
 
   </body>
 
