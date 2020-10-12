@@ -187,6 +187,15 @@ function SelectPage( page ) {
         break;
     }
 };
+function keydown()
+{
+if(event.keyCode == 123){
+event.keyCode = 0;
+alert("ん？＾＾");
+return false;
+}
+}
+window.document.onkeydown = keydown;
 </script>
 
 <div class="title">
