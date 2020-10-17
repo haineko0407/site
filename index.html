@@ -22,19 +22,19 @@ button.twitter,button.youtube {
   overflow: hidden;
 }
 .twitter_tl {
-  position:fixed;
+  position:absolute;
   top: 300px;
   right:3px;
   z-index: 2;
 }
 button.twitter {
-  position:fixed;
+  position:absolute;
   top: 210px;
   right:90px;
   z-index: 2;
 }
 button.youtube {
-  position:fixed;
+  position:absolute;
   top: 210px;
   right:60px;
   z-index: 2;
@@ -97,7 +97,7 @@ button.youtube {
   -webkit-border-radius:10px;
   border-radius:10px;
   overflow: hidden;
-   position:fixed;
+   position:absolute;
    top: 40px;
    right:30px;
    z-index: 2;
@@ -109,7 +109,7 @@ button.youtube {
   -webkit-border-radius:10px;
   border-radius:10px;
   overflow: hidden;
-   position:fixed;
+   position:absolute;
    top: 180px;
    right:30px;
    z-index: 2;
@@ -162,6 +162,9 @@ button.youtube {
     font-size: 20px;
     border-color: #00CCFF;
 }
+.zentai {
+  opacity: 1;
+}
 body {
   background: black;
 }
@@ -170,43 +173,11 @@ button img {
 }
 </style>
 
-<script type="text/javascript" language="javascript">
-function SelectPage( page ) {
-    var elementPage1 = document.getElementById( "page1" );
-    var elementPage2 = document.getElementById( "page2" );
 
-    switch( page ) {
-    case 1:
-        elementPage1.style.display = 'block';
-        elementPage2.style.display = 'none';
-        break;
 
-    case 2:
-        elementPage1.style.display = 'none';
-        elementPage2.style.display = 'block';
-        break;
-    }
-};
-function keydown()
-{
-if(event.keyCode == 123){
-event.keyCode = 0;
-return false;
-}
-}
-window.document.onkeydown = keydown;
-</script>
-
+<div class="zentai" id="zentai">
 <div class="title">
 <br>灰猫のほーむぺーじだよー
-</div>
-<div class="twitter_tl">
-<a class="twitter-timeline" data-lang="ja" data-width="150" data-height="400" data-theme="light" href="https://twitter.com/haineko0407?ref_src=twsrc%5Etfw">Tweets by haineko0407</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<br>
-<a href="https://twitter.com/haineko0407?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="ja" data-show-count="false">Follow @haineko0407</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-<div class="description">
-  灰猫
 </div>
 
 <div class="menu_bar">
@@ -250,18 +221,66 @@ window.document.onkeydown = keydown;
       <td>フリーズ</td>
       <td>フリーズ使用</td>
     </tr>
+    <tr>
+      <td>merry1914</td>
+      <td>フリーズ</td>
+      <td>フリーズ使用</td>
+    </tr>
+    <tr>
+      <td>ninzinkun14541<br>（にんじん）</td>
+      <td>フリーズ</td>
+      <td>フリーズ使用</td>
+    </tr>
   </table>
   </div>
 </div>
-<div class="side"></div>
-<img src= "haineko.png" class="icon" alt= "灰猫" title = "灰猫" width="100%" height="100%">
-<button class="twitter" type="submit" onclick="location.href='https://twitter.com/haineko0407'">
-  <img src= "twitter.png" alt= "灰猫twitter" title = "灰猫twitter" width="100%" height="100%">
-</button>
-<button class="youtube" type="submit" onclick="location.href='https://www.youtube.com/channel/UCYU8c5V2D2GK1POnLxJVipw/featured?view_as=subscriber'">
-  <img src= "youtube.png" alt= "灰猫youtube" title = "灰猫youtube" width="100%" height="100%">
-</button>
 
+<div class="side"></div>
+  <div class="twitter_tl">
+    <a class="twitter-timeline" data-lang="ja" data-width="150" data-height="400" data-theme="light" href="https://twitter.com/haineko0407?ref_src=twsrc%5Etfw">Tweets by haineko0407</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <br>
+    <a href="https://twitter.com/haineko0407?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="ja" data-show-count="false">Follow @haineko0407</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  <div class="description">
+    灰猫
+  </div>
+  <img src= "haineko.png" class="icon" alt= "灰猫" title = "灰猫" width="100%" height="100%">
+  <button class="twitter" type="submit" onclick="location.href='https://twitter.com/haineko0407'">
+    <img src= "twitter.png" alt= "灰猫twitter" title = "灰猫twitter" width="100%" height="100%">
+  </button>
+  <button class="youtube" type="submit" onclick="location.href='https://www.youtube.com/channel/UCYU8c5V2D2GK1POnLxJVipw/featured?view_as=subscriber'">
+    <img src= "youtube.png" alt= "灰猫youtube" title = "灰猫youtube" width="100%" height="100%">
+  </button>
+</div>
+
+
+
+<script type="text/javascript" language="javascript">
+function SelectPage( page ) {
+    var elementPage1 = document.getElementById( "page1" );
+    var elementPage2 = document.getElementById( "page2" );
+
+    switch( page ) {
+    case 1:
+        elementPage1.style.display = 'block';
+        elementPage2.style.display = 'none';
+        break;
+
+    case 2:
+        elementPage1.style.display = 'none';
+        elementPage2.style.display = 'block';
+        break;
+    }
+};
+function keydown()
+{
+if(event.keyCode == 123){
+event.keyCode = 0;
+return false;
+}
+}
+window.document.onkeydown = keydown;
+</script>
   </body>
 
 
