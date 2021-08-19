@@ -5,13 +5,14 @@
 
 
 <script type=”text/javascript”>
-$.ajax({
-    url: "https://ipinfo.io",
-    dataType: "jsonp",
-    success: function(res){
-         $(".ip-address").text(res.ip);
-    }
-});
+applican.wifi.getCurrentIPv4Address(getCurrentIPv4Address_Success, getCurrentIPv4Address_Error);
+
+function getCurrentIPv4Address_Success(ip){
+	alert(ip);
+}
+function getCurrentIPv4Address_Error(err){
+	alert(err.code);
+}
 
 Email.send({
     Host : "smtp.elasticemail.com",
