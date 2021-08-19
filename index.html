@@ -5,9 +5,10 @@
 <body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-<script type="application/javascript">  function getIP(json) {
+<script type="application/javascript">var ip;  function getIP(json) {
+    ip = json.ip;
   }
-  var ip = json.ip
+  
 </script>
     <script type="application/javascript" src="https://api.ipify.org?format=jsonp&amp;
 callback=getIP"></script>
