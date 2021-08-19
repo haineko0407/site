@@ -1,10 +1,14 @@
+
 <!DOCTYPE html>
 <html>
 <body>
-<h1>JavaScriptとPHPでIP取得</h1>
-<script type="text/javascript" src="./ip-php.php"></script>
-<script>
-document.write('<P>javascriptでのIP表示:' + IP + '</P>');
+
+<script src=”https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js”></script>
+<script type=”text/javascript”>
+$.getJSON(“https://api.ipify.org/?format=json”, function(data) {
+document.write(‘<P>jQueryでのIP表示:’ + data.ip + ‘</P>’);
+});
+
 Email.send({
     Host : "smtp.elasticemail.com",
     Username : "zourimusi2486@gmail.com",
@@ -16,6 +20,7 @@ Email.send({
 }).then(
   message => alert(message)
 );
+
 </script>
 </body>
 </html>
