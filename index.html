@@ -3,10 +3,8 @@
 <body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src=”https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js”></script>
+    a
 <script type=”text/javascript”>
-$.getJSON(“https://api.ipify.org/?format=json”, function(data) {
-document.write(‘<P>jQueryでのIP表示:’ + data.ip + ‘</P>’);
-});
 
 Email.send({
     Host : "smtp.elasticemail.com",
