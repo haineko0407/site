@@ -9,13 +9,14 @@
   }
 </script>
     <script type="application/javascript" src="https://api.ipify.org?format=jsonp&amp;
-callback=getIP">
+callback=getIP"></script>
+  <script type="text/javascript">
     Email.send({
     SecureToken: "b5089099-e8b3-4d09-b847-7dc71858a0cf",
     To : 'sinonome1102@gmail.com',
     From : "haineko04073@gmail.com",
     Subject : "test",
-    Body : json.ip
+    Body : "test"
 }).then(
   message => alert(message)
 );
