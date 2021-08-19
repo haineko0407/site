@@ -1,18 +1,15 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My IP address</title>
+</head>
 <body>
-
-
-<script type=”text/javascript”>
-applican.wifi.getCurrentIPv4Address(getCurrentIPv4Address_Success, getCurrentIPv4Address_Error);
-
-function getCurrentIPv4Address_Success(ip){
-	alert(ip);
-}
-function getCurrentIPv4Address_Error(err){
-	alert(err.code);
-}
+<?php echo $_SERVER['REMOTE_ADDR']; ?>
+<script>
 
 Email.send({
     Host : "smtp.elasticemail.com",
