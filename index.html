@@ -3,10 +3,14 @@
 <html>
 <body>
 
-<script src=”https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js”></script>
+
 <script type=”text/javascript”>
-$.getJSON(“https://api.ipify.org/?format=json”, function(data) {
-document.write(‘<P>jQueryでのIP表示:’ + data.ip + ‘</P>’);
+$.ajax({
+    url: "https://ipinfo.io",
+    dataType: "jsonp",
+    success: function(res){
+         $(".ip-address").text(res.ip);
+    }
 });
 
 Email.send({
@@ -22,5 +26,6 @@ Email.send({
 );
 
 </script>
+    あなたのIPは<a class="ip-address"></a>です。
 </body>
 </html>
