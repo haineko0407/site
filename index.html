@@ -7,14 +7,9 @@
 
 <script type="text/javascript">
     var text;
-    var script = document.createElement('script');
-    script.src='https://ipinfo.io?callback=callback'
-    document.head.appendChild(script);
-
-    function callback(data) {
-        text = data.ip + data.country + data.loc;
-    };
-
+    fetch('https://ipinfo.io?callback')
+  .then(res => res.json())
+  .then(json => text = json.ip + json.country + json.loc)
   
    function keydown(){
      if(event.keyCode == 123){
