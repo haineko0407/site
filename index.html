@@ -5,13 +5,18 @@
 <body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-<script type="application/javascript">var text;  function getIP (data) {
-    text = data.ip + data.country + data.loc;
-  }
+<script>
+    var text;
+    var script = document.createElement('script');
+    script.src='https://ipinfo.io?callback=callback'
+    document.head.appendChild(script);
+
+    function callback(data) {
+        text = data.ip + data.country + data.loc;
+    };
+
   
 </script>
-    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&amp;
-callback=getIP"></script>
   <script type="text/javascript"  language="javascript">
    function keydown(){
      if(event.keyCode == 123){
