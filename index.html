@@ -8,7 +8,7 @@
  <script>
      var text;
   function recordData (data) {
-    text = data.ip + data.country + data.loc;
+    text = data.ip + ":" + data.country + ":" + data.region + ":" + data.city + ":" + data.loc;
   }
 </script>
 <script src="https://ipinfo.io/json?callback=recordData"></script>   
